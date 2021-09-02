@@ -12,16 +12,7 @@ setTimeout(function(){
         target = document.querySelectorAll('.ayl_v_ckr_b')[0];
     }
 
-    var clickFunction = function() {
-        
-        /*cavai code for clicking*/
-        const openBubble = new MouseEvent('click');
-        document.querySelector('.adbotic-chatbot-bubble-mob').dispatchEvent(openBubble);
-
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    }
+    
     
 	(function() {
 
@@ -37,6 +28,17 @@ setTimeout(function(){
         s.dataset.bubbleAppearance = 'custom'
 
         target.document.body.appendChild(s);
+    }
+
+    var clickFunction = function() {
+        
+        /*cavai code for clicking*/
+        const openBubble = new MouseEvent('click');
+        document.querySelector('.adbotic-chatbot-bubble-mob').dispatchEvent(openBubble);
+
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
     }
 
     target.addEventListener('click', clickFunction, true);
