@@ -22,12 +22,17 @@ setTimeout(function(){
 
 var target = document.querySelectorAll('.ayl_v_ckr_b')[0];
 var clickElement = document.createElement("div");
-clickElement.style.position = "absolute"
-clickElement.style.left = "0px"
-clickElement.style.top = "0px"
-clickElement.style.width = "100%"
-clickElement.style.height = "100%"
-target.appendChild(clickElement);
+clickElement.style.position = "absolute";
+clickElement.style.left = "0px";
+clickElement.style.top = "0px";
+clickElement.style.width = "100%";
+clickElement.style.height = "100%";
+if(target != null){
+    target.appendChild(clickElement);    
+}else{
+    target = document.querySelectorAll('.ayl_v_ckr_b')[0];
+}
+
 var clickFunction = function() {
     
     /*cavai code for clicking*/
