@@ -1,32 +1,4 @@
-setTimeout(function(){ 
-        var target = document.querySelectorAll('.ayl_v_ckr_b')[0];
-var clickElement = document.createElement("div");
-clickElement.style.position = "absolute";
-clickElement.style.left = "0px";
-clickElement.style.top = "0px";
-clickElement.style.width = "100%";
-clickElement.style.height = "100%";
-if(target != null){
-    target.appendChild(clickElement);
-}else{
-    target = document.querySelectorAll('.ayl_v_ckr_b')[0];
-}
-
-
-var clickFunction = function() {
-    
-    /*cavai code for clicking*/
-    const openBubble = new MouseEvent('click');
-    document.querySelector('.adbotic-chatbot-bubble-mob').dispatchEvent(openBubble);
-
-    event.preventDefault();
-    event.stopPropagation();
-    return false;
-}
-target.addEventListener('click', clickFunction, true);
-target.addEventListener('touchstart', clickFunction, true);
-	(function() {
-
+(function() {
     function async_load(target){
         var s = target.document.createElement('script');
         s.type = 'text/javascript';
@@ -40,6 +12,30 @@ target.addEventListener('touchstart', clickFunction, true);
 
         target.document.body.appendChild(s);
     }
-   
+    try {
+      async_load(window.top)
+    } catch (error) {
+      async_load(window)
+    }
 })();
-}, 1000);
+
+var target = document.querySelectorAll('.ayl_v_ckr_b')[0];
+var clickElement = document.createElement("div");
+clickElement.style.position = "absolute"
+clickElement.style.left = "0px"
+clickElement.style.top = "0px"
+clickElement.style.width = "100%"
+clickElement.style.height = "100%"
+target.appendChild(clickElement);
+var clickFunction = function() {
+    
+    /*cavai code for clicking*/
+    const openBubble = new MouseEvent('click');
+    document.querySelector('.adbotic-chatbot-bubble-mob').dispatchEvent(openBubble);
+
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+}
+target.addEventListener('click', clickFunction, true);
+target.addEventListener('touchstart', clickFunction, true);
