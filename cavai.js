@@ -20,7 +20,7 @@ setTimeout(function(){
     }
 })();
 
-var target = document.querySelectorAll('.ayl_v_ckr_b')[0];
+var target = top.document.querySelectorAll('.ayl_v_ckr_b')[0];
 var clickElement = document.createElement("div");
 clickElement.style.position = "absolute";
 clickElement.style.left = "0px";
@@ -30,7 +30,7 @@ clickElement.style.height = "100%";
 if(target != null){
     target.appendChild(clickElement);    
 }else{
-    target = document.querySelectorAll('.ayl_v_ckr_b')[0];
+    target = top.document.querySelectorAll('.ayl_v_ckr_b')[0];
 }
 
 var clickFunction = function() {
