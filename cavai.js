@@ -1,8 +1,5 @@
 setTimeout(function(){ 
-    var target = document.querySelector('.ayl_v_ckr_b');
-	(function() {
-
-    
+        var target = document.querySelector('.ayl_v_ckr_b');
 var clickElement = document.createElement("div");
 clickElement.style.position = "absolute";
 clickElement.style.left = "0px";
@@ -22,6 +19,7 @@ var clickFunction = function() {
 }
 target.addEventListener('click', clickFunction, true);
 target.addEventListener('touchstart', clickFunction, true);
+	(function() {
 
     function async_load(target){
         var s = target.document.createElement('script');
