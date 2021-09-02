@@ -43,6 +43,11 @@ var clickFunction = function() {
     event.stopPropagation();
     return false;
 }
-target.addEventListener('click', clickFunction, true);
+
+
+setTimeout(function(){
+    target.addEventListener('click', clickFunction, true);
 target.addEventListener('touchstart', clickFunction, true);
+},2000);
+
 }, 1000);
