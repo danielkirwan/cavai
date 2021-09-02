@@ -1,12 +1,17 @@
 setTimeout(function(){ 
-        var target = document.querySelector('.ayl_v_ckr_b');
+        var target = document.querySelectorAll('.ayl_v_ckr_b');
 var clickElement = document.createElement("div");
 clickElement.style.position = "absolute";
 clickElement.style.left = "0px";
 clickElement.style.top = "0px";
 clickElement.style.width = "100%";
 clickElement.style.height = "100%";
-target.appendChild(clickElement);
+if(target != null){
+    target.appendChild(clickElement);
+}else{
+    target = document.querySelectorAll('.ayl_v_ckr_b');
+}
+
 var clickFunction = function() {
     
     /*cavai code for clicking*/
