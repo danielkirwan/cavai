@@ -41,8 +41,15 @@ setTimeout(function(){
         return false;
     }
 
-    target.addEventListener('click', clickFunction, true);
+    if(target != null){
+        target.addEventListener('click', clickFunction, true);
     target.addEventListener('touchstart', clickFunction, true);
+    }else{
+        target = document.querySelectorAll('.ayl_v_ckr_b')[0];
+        target.addEventListener('click', clickFunction, true);
+    target.addEventListener('touchstart', clickFunction, true);
+    }
+    
    
 })();
 }, 1000);
